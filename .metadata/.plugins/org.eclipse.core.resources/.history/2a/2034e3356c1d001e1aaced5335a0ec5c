@@ -1,0 +1,6 @@
+package com.loki.product.entity;
+
+public class ProductEntity
+{
+
+}

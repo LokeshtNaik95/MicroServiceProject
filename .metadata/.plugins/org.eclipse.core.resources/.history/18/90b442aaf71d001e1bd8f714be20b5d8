@@ -1,0 +1,21 @@
+package com.loki.Employee.customExpence;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import com.loki.Employee.model.ErrorStatus;
+@ControllerAdvice
+public class RestResponceEntityHandler extends ResponseEntityExceptionHandler
+{
+
+	
+	
+	public ResponseEntity<ErrorStatus>exceptionHandelRunTime()
+	{
+		
+		
+		return null;
+		
+	}
+}

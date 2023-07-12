@@ -1,0 +1,9 @@
+package com.loki.product.model;
+
+import lombok.Data;
+
+@Data
+public class ProdectResponce
+{
+
+}

@@ -1,0 +1,6 @@
+package com.loki.orderservice.repository;
+
+public interface OrderRepository 
+{
+
+}

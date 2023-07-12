@@ -1,0 +1,28 @@
+package com.loki.Employee.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.loki.Employee.model.ReqvestEntity;
+
+@Service
+public class EmployeeService
+{
+	@Autowired
+	private EmployeeRepository employeeRepository;
+
+	public ResponseEntity saveData(ReqvestEntity reqvestEntity) {
+		
+		
+		EmployeeEntity employeeEntity= employeeEntity.builder()
+				
+			.name(reqvestEntity.getName())
+			.dept(reqvestEntity.getDept()).build();
+		
+		return null;
+		
+		
+	}
+
+}

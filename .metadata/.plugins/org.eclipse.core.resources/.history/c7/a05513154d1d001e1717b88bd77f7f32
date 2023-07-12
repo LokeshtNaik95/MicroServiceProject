@@ -1,0 +1,6 @@
+package com.loki.demo.repository;
+
+public interface StudentRepository 
+{
+
+}

@@ -1,0 +1,9 @@
+package com.loki.product.productServiceCustoEexception;
+
+public class RestResponceEntityHandeler 
+{
+  // here we can handle the exception 
+	
+	
+	
+}

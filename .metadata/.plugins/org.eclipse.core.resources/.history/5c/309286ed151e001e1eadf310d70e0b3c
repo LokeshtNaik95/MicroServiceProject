@@ -1,0 +1,26 @@
+package com.loki.orderservice.entity;
+
+import java.time.Instant;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+
+@Entity
+
+public class OrderEntity 
+{
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private long orderId;
+  
+  private long poductId;
+  private long quantity;
+  private Instant orderDate;
+  private String status;
+  private long amount;
+  
+  
+}

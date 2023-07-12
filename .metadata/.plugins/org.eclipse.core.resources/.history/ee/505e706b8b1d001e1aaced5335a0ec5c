@@ -1,0 +1,6 @@
+package com.loki.Employee.service;
+
+public class EmployeeEntity 
+{
+
+}

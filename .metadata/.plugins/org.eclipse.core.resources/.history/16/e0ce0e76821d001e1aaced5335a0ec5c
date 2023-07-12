@@ -1,0 +1,54 @@
+package com.loki.product.service;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.loki.product.entity.ProductEntity;
+import com.loki.product.model.ProdectResponce;
+import com.loki.product.model.ProductRequest;
+import com.loki.product.repository.ProductRepository;
+
+import lombok.extern.log4j.Log4j2;
+
+@Service
+@Log4j2
+public class ProductService
+{
+	@Autowired
+	private ProductRepository productRepository;
+	
+//	@Autowired
+//	private ProductEntity product;
+
+	public Long adProduct(ProductRequest productRequest) 
+	{
+		log.info("Adding Product Info");
+		
+		ProductEntity product = ProductEntity.builder()
+				.productName(productRequest.getProductName())
+				.productPrice(productRequest.getProductPrice())
+				.productQuantity(productRequest.getProductQuantity()).build();
+				
+		        productRepository.save(product);
+		 log.info("Product Created");
+		return product.getProductID();
+	}
+
+	public ProdectResponce getProductById(long id)
+	{
+		
+		log.info("Get the Prodect of Product id :{}", id);
+		ProductEntity productEntity=
+				productRepository.findById(id).
+				orElseThrow(
+						()-> new RuntimeException("Product with given id Not Found "));
+		
+		ProdectResponce prodectResponce = new ProdectResponce();
+		BeanUtils.copyProperties(productEntity,prodectResponce);
+		
+		return prodectResponce;
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.loki.product.service;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.loki.product.model.ProductRequest;
+
+@Service
+public class ProductService
+{
+
+	public ResponseEntity<Long> adProduct(ProductRequest productRequest) 
+	{
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.loki.orderservice.model;
+
+import java.time.Instant;
+
+public class RequestModel 
+{
+	  private long poductId;
+	  private long quantity;
+	  private Instant orderDate;
+	  private String status;
+	  private long amount;
+
+}

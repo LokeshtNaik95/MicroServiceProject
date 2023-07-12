@@ -1,0 +1,15 @@
+package com.loki.product.productServiceCustoEexception;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+
+@ControllerAdvice
+public class RestResponceEntityHandeler extends ResponseEntityExceptionHandler
+{
+  // here we can handle the exception 
+	
+	
+	public ResponseEntity<>
+}

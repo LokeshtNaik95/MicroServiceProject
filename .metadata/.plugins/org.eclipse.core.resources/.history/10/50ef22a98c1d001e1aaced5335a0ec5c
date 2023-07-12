@@ -1,0 +1,6 @@
+package com.loki.Employee.model;
+
+public class ReqvestEntity 
+{
+
+}

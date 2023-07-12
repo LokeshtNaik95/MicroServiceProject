@@ -1,0 +1,21 @@
+package com.loki.demo.controler;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.loki.demo.module.Student;
+import com.loki.demo.service.StudentService;
+
+@RestController
+
+public class StudentControler
+{
+	public StudentService stdService;
+	
+	public void saveInfo(Student std)
+	{
+		stdService.saveData(std);
+	}
+	
+
+
+}

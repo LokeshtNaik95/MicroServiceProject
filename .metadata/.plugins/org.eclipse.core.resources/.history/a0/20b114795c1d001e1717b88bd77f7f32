@@ -1,0 +1,48 @@
+package com.loki.demo.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.objectweb.asm.tree.TryCatchBlockNode;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.loki.demo.module.Student;
+import com.loki.demo.repository.StudentRepository;
+
+
+@Service
+public class StudentService 
+{
+	@Autowired
+    public StudentRepository studentRepository;
+	
+	public void saveData( Student std)
+	{
+		studentRepository.save(std);
+		
+	}
+	
+	public  List<Student> getData()
+	{
+		return studentRepository.findAll() ;
+		
+	}
+	
+	public Student getByID(int id)
+	{
+		
+		try
+		{
+			
+			Student stdList= studentRepository.findById(id);
+			
+			if(stdList. stdList).getId()==id)
+			
+			return studentRepository.getById(id);
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		return studentRepository.getById(id);
+		
+	}
+}

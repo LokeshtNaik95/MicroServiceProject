@@ -1,0 +1,27 @@
+package com.loki.product.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import lombok.Data;
+
+@Entity
+@Data
+public class ProductEntity
+{
+
+	
+	@Id
+	@GenericGenerator(name = "auto", strategy = "incremenet")
+	@GeneratedValue(generator = "auto")
+	private long productID;
+	
+	private String productName;
+	
+	private long price ;
+	
+	private long quantity;
+}

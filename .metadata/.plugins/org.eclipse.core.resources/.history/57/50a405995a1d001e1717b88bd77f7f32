@@ -1,0 +1,12 @@
+package com.loki.demo.erro;
+
+public class StudentNotFoundException extends RuntimeException
+{
+
+	public StudentNotFoundException(String str) 
+	{
+		super(str);
+	}
+	
+	
+}

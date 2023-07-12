@@ -1,0 +1,6 @@
+package com.loki.product.repository;
+
+public interface ProductRepository 
+{
+
+}

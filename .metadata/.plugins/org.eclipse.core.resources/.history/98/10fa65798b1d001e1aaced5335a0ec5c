@@ -1,0 +1,8 @@
+package com.loki.Employee.service;
+
+public class EmployeeEntity 
+{
+	private long id;
+	private string name;
+
+}

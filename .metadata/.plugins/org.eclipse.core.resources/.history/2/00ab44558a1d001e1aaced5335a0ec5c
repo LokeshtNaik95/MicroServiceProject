@@ -1,0 +1,17 @@
+package com.loki.product.productServiceCustoEexception;
+
+import lombok.Data;
+
+@Data
+public class ProductException extends RuntimeException
+{
+   private String errorCode;
+   
+   
+   public ProductException(String massage, String errorCode) 
+   {
+	   super(massage);
+	   this.errorCode=errorCode;
+	   
+   }
+}

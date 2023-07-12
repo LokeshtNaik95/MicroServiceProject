@@ -1,0 +1,31 @@
+package com.loki.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.loki.demo.module.Student;
+import com.loki.demo.repository.StudentRepository;
+
+
+@Service
+public class StudentService 
+{
+	@Autowired
+    public StudentRepository studentRepository;
+	
+	public void saveData(@RequestBody Student std)
+	{
+		studentRepository.save(std);
+		
+	}
+	
+	public List<Student> @ResponseBody getData()
+	{
+		return studentRepository.findAll() ;
+		
+	}
+}

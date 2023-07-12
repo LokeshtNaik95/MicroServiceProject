@@ -1,0 +1,37 @@
+package com.loki.orderservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.loki.orderservice.entity.OrderEntity;
+import com.loki.orderservice.model.RequestModel;
+import com.loki.orderservice.repository.OrderRepository;
+
+@Service
+public class OrderService {
+
+	
+	@Autowired
+	private OrderRepository orderRepository;
+	
+	
+	public long placeOrder(RequestModel requestModel) {
+		
+		
+		OrderEntity orderEntity= OrderEntity.builder()
+				.productId(requestModel.getPoductId())
+				.quantity(requestModel.getQuantity())
+				.orderDate(requestModel.getOrderDate())
+				.status(requestModel.getStatus())
+				.amount(requestModel.getAmount()).build();
+		
+		        orderRepository.save(orderEntity);
+		
+		return orderEntity.getOrderId() ;
+		
+		
+	}
+
+}

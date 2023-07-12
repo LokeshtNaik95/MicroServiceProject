@@ -1,0 +1,17 @@
+package com.loki.product.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class ProductEntity
+{
+
+	
+	private long productID;
+	
+	private String productName;
+	
+	private long price ;
+	
+	private long quantity;
+}

@@ -1,0 +1,5 @@
+package com.loki.demo.erro;
+
+public class StudentNotFoundException {
+
+}

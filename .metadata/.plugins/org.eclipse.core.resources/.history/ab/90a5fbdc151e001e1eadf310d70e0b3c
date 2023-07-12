@@ -1,0 +1,22 @@
+package com.loki.orderservice.entity;
+
+import java.time.Instant;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+
+@Entity
+
+public class OrderEntity 
+{
+  @Id
+  private long orderId;
+  private long poductId;
+  private long quantity;
+  private Instant orderDate;
+  private String status;
+  private long amount;
+  
+  
+}

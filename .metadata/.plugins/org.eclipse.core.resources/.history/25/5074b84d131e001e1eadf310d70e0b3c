@@ -1,0 +1,5 @@
+package com.loki.orderservice.model;
+
+public class OrderModel {
+
+}

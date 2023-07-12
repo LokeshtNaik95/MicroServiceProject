@@ -1,0 +1,32 @@
+package com.loki.demo.controler;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.loki.demo.module.Student;
+import com.loki.demo.service.StudentService;
+
+@RestController
+
+public class StudentControler
+{
+	@Autowired
+	public StudentService stdService;
+	
+	
+	public void saveInfo(Student std)
+	{
+		stdService.saveData(std);
+	}
+	
+	
+	public List<Student>get()
+	{
+		return stdService.getData();
+		
+	}
+
+
+}

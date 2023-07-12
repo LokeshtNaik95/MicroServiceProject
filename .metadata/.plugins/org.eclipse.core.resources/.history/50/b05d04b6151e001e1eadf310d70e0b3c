@@ -1,0 +1,13 @@
+package com.loki.orderservice.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+
+public class OrderEntity 
+{
+  @Id
+  private long orderId;
+  
+}

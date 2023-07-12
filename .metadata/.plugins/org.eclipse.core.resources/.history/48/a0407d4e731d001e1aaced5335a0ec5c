@@ -1,0 +1,33 @@
+package com.loki.product.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.loki.product.entity.ProductEntity;
+import com.loki.product.model.ProductRequest;
+import com.loki.product.repository.ProductRepository;
+
+@Service
+public class ProductService
+{
+	@Autowired
+	private ProductRepository productRepository;
+	
+//	@Autowired
+//	private ProductEntity product;
+
+	public Long adProduct(ProductRequest productRequest) 
+	{
+		
+		ProductEntity product = product.builder()
+				.productName(productRequest.getProductName())
+				.productPrice(productRequest.getProductPrice())
+				.productQuantity(productRequest.getProductQuantity()).build();
+				
+		        productRepository.save(product);
+		
+		return product.getProductID();
+	}
+
+}

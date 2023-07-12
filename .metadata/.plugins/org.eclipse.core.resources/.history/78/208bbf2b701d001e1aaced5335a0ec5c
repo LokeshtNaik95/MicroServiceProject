@@ -1,0 +1,11 @@
+package com.loki.product.model;
+
+public class ProductRequest 
+{
+    private String productName;
+	
+	private long price ;
+	
+	private long quantity;
+
+}

@@ -1,0 +1,18 @@
+package com.loki.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.loki.demo.module.Student;
+
+
+@Service
+public class StudentService 
+{
+
+	
+	public void saveData( Student std)
+	{
+		
+		
+	}
+}

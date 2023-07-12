@@ -1,0 +1,5 @@
+package com.loki.orderservice.entity;
+
+public class OrderEntity {
+
+}
